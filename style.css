@@ -1,0 +1,155 @@
+/* Kanguru tanıtım sayfası: ürünle aynı renk değerleri (frontend/src/app/kanguru.css). */
+:root {
+  --ink: #171a23;
+  --muted: #5b6272;
+  --line: #e4e1d9;
+  --paper: #f6f5f1;
+  --surface: #ffffff;
+  --accent: #3138c9;
+  --accent-strong: #232aa3;
+  --accent-soft: #eef0ff;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ink: #e8e9ee;
+    --muted: #a9afbd;
+    --line: #2c3140;
+    --paper: #12141b;
+    --surface: #1a1d27;
+    --accent: #8f95ff;
+    --accent-strong: #b3b7ff;
+    --accent-soft: #23264a;
+  }
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.6;
+}
+.top,
+main,
+.foot {
+  width: min(960px, 100% - 32px);
+  margin: 0 auto;
+}
+.top {
+  padding: 20px 0;
+}
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--ink);
+  font-size: 20px;
+  font-weight: 700;
+  text-decoration: none;
+}
+.mark {
+  display: inline-grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: #3138c9; /* koyu temada da beyaz harfle yeterli kontrast */
+  color: #fff;
+}
+.hero {
+  padding: 40px 0 24px;
+}
+.eyebrow {
+  margin: 0 0 8px;
+  color: var(--accent);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+h1 {
+  margin: 0 0 16px;
+  font-size: clamp(30px, 6vw, 44px);
+  line-height: 1.15;
+}
+.lead {
+  max-width: 68ch;
+  margin: 0;
+  color: var(--muted);
+  font-size: 18px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+  padding: 16px 0;
+}
+.grid article,
+.contact,
+.policy {
+  padding: 20px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--surface);
+}
+.grid h2,
+.contact h2 {
+  margin: 0 0 8px;
+  font-size: 18px;
+}
+.grid p,
+.contact p {
+  margin: 0;
+  color: var(--muted);
+}
+.contact {
+  margin: 16px 0 40px;
+}
+.contact p + p {
+  margin-top: 6px;
+}
+a {
+  color: var(--accent);
+}
+a:hover {
+  color: var(--accent-strong);
+}
+a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+.policy {
+  margin: 24px 0 40px;
+}
+.policy h1 {
+  font-size: clamp(26px, 5vw, 34px);
+}
+.policy h2 {
+  margin: 28px 0 8px;
+  font-size: 19px;
+}
+.policy p,
+.policy li {
+  color: var(--ink);
+}
+.policy .meta {
+  color: var(--muted);
+}
+.draft {
+  padding: 12px 14px;
+  border-radius: 10px;
+  background: var(--accent-soft);
+  color: var(--ink);
+}
+.foot {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 24px 0 40px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 14px;
+}
